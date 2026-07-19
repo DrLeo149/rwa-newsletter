@@ -1,0 +1,761 @@
+/* ============================================================
+   Ankya Advisors LLP  |  RWA Newsletter Landing Page
+   Brand-matched to ankyadvisors.com.
+   Fonts:  Outfit (headings) + Be Vietnam Pro (body)
+   Palette: purple #5e3a95 accent, near-black headings,
+            white ground with light lavender/gray section tints.
+   Mobile-first, single column, calm and credibility-led.
+   ============================================================ */
+
+:root {
+  --purple: #5e3a95;        /* brand primary accent (buttons, links, h2) */
+  --purple-deep: #3e1e6f;   /* darker brand purple (footer) */
+  --purple-soft: #f4f2f9;   /* light lavender section tint */
+  --purple-line: #e6e0f0;   /* lavender-tinted hairline */
+  --ink: #383838;           /* brand body text */
+  --near-black: #0a0a0a;    /* brand h1 colour */
+  --muted: #5f5f66;         /* secondary text */
+  --ground: #ffffff;        /* page background */
+  --surface: #ffffff;       /* cards, form */
+  --gray-tint: #f5f4f4;     /* neutral section tint */
+  --line: #e4e2e6;          /* neutral hairline */
+  --error: #d92d20;         /* accessible red, in the brand red family */
+  --radius: 8px;            /* brand button/card radius */
+  --shadow: 0 1px 2px rgba(16, 12, 30, 0.05), 0 10px 30px rgba(62, 30, 111, 0.07);
+  --maxw: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 74px; /* keep anchor targets clear of the sticky header */
+}
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--ground);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  animation: pageIn 0.6s ease both; /* subtle fade on load, the only motion */
+}
+
+@keyframes pageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--near-black);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
+
+/* ---------- Buttons (brand: purple, 8px radius, weight 600) ---------- */
+.btn {
+  display: inline-block;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 15px 32px;
+  min-height: 52px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.05s ease;
+}
+
+.btn--primary {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+.btn--primary:hover {
+  background: var(--purple-deep);
+  border-color: var(--purple-deep);
+}
+
+.btn--primary:active {
+  transform: translateY(1px);
+}
+
+.btn--primary:focus-visible {
+  outline: 3px solid rgba(94, 58, 149, 0.4);
+  outline-offset: 2px;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Hero (white, corporate, logo-led) ---------- */
+.hero {
+  background: var(--surface);
+  color: var(--ink);
+  padding: 24px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Sticky site header: logo pinned to the top on scroll */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(26, 43, 74, 0.05);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 38px;   /* tasteful header size, keeps the source aspect ratio */
+  max-width: 70%;
+}
+
+.hero__headline {
+  color: var(--near-black);
+  font-size: 2.1rem;
+  font-weight: 700;
+  max-width: 20ch;
+}
+
+.hero__subhead {
+  font-size: 1.16rem;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0 0 30px;
+}
+
+.hero__cta {
+  box-shadow: var(--shadow);
+}
+
+.hero__note {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 16px 0 0;
+}
+
+/* Hero two-column row: text on the left, image carousel on the right.
+   Stacks (text then image) on mobile. */
+.hero__row {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.hero__media {
+  width: 100%;
+}
+
+/* Auto-advancing image carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background: #ece8f2;
+}
+
+.carousel__track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.carousel__track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__track {
+    transition: none;
+  }
+}
+
+/* ---------- Builder logo ticker ---------- */
+.ticker {
+  background: var(--purple-deep);
+  padding: 42px 0 46px;
+  overflow: hidden;
+}
+
+.ticker__heading {
+  text-align: center;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0 0 28px;
+}
+
+.ticker__viewport {
+  position: relative;
+  overflow: hidden;
+  /* Edge fade masks: logos fade to the strip background at both edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: ticker-scroll 36s linear infinite;
+}
+
+/* Pause on hover (desktop) */
+.ticker__viewport:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  flex: 0 0 auto;
+  padding: 0 26px; /* generous, even horizontal spacing */
+  display: flex;
+  align-items: center;
+}
+
+/* White rounded chip so any logo, transparent or not, reads cleanly
+   and uniformly against the dark strip. */
+.logo-chip {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.logo-chip img {
+  display: block;
+  height: 44px; /* normalize all logos to one height */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain; /* never crop: always show the whole logo */
+  filter: grayscale(1);
+  opacity: 0.82;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+/* Individual logo returns to full colour on hover */
+.logo-chip:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* The Bollineni source file is top-flush (ink touches the top edge with
+   empty space below), so it reads as cut off at the top. Nudge it down a
+   touch to re-centre it. Targets every copy by filename. */
+.logo-chip img[src$="bollineni.png"] {
+  transform: translateY(4px);
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-20%); } /* exactly one set (of five copies) */
+}
+
+/* Software strip: six logos, four copies, so one set is -25% */
+.ticker__track--sw {
+  animation-name: ticker-scroll-sw;
+}
+
+@keyframes ticker-scroll-sw {
+  from { transform: translateX(0); }
+  to { transform: translateX(-25%); } /* exactly one set (of four copies) */
+}
+
+/* Reduced motion: no scroll, wrap logos statically, no hover transitions */
+@media (prefers-reduced-motion: reduce) {
+  .ticker__viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .ticker__track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .ticker__item[data-dup] {
+    display: none; /* avoid showing every logo twice when static */
+  }
+  .logo-chip img {
+    filter: none;
+    opacity: 1;
+    transition: none;
+  }
+}
+
+/* ---------- Section shared ---------- */
+.section__title {
+  font-size: 1.75rem;
+  color: var(--purple); /* brand uses purple for section headings */
+}
+
+.section__lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 58ch;
+  margin: 0 0 8px;
+}
+
+/* Covers on a light lavender tint for corporate rhythm */
+.covers {
+  padding: 60px 0;
+  background: var(--purple-soft);
+  border-bottom: 1px solid var(--purple-line);
+}
+
+.covers .section__title,
+.covers .section__lead {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.covers .section__lead {
+  margin-bottom: 40px;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--purple-line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  box-shadow: var(--shadow);
+}
+
+.card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  background: rgba(94, 58, 149, 0.09);
+  color: var(--purple);
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.card__title {
+  font-size: 1.28rem;
+  color: var(--near-black);
+  margin-bottom: 8px;
+}
+
+.card__text {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+
+/* ---------- Subscribe / form (white section, white card) ---------- */
+.subscribe {
+  padding: 26px 0 38px;
+  background: var(--surface);
+}
+
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--purple-line);
+  border-top: 3px solid var(--purple);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-card .section__title {
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 5px;
+}
+
+.form-card .section__lead {
+  text-align: center;
+  font-size: 0.94rem;
+  margin: 0 auto 16px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  color: var(--near-black);
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.field input[type="text"],
+.field input[type="email"] {
+  width: 100%;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ink);
+  padding: 10px 12px;
+  min-height: 44px;
+  border: 1px solid #d5d0dd;
+  border-radius: var(--radius);
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input::placeholder {
+  color: #9a97a2;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(94, 58, 149, 0.14);
+}
+
+.field input.is-invalid {
+  border-color: var(--error);
+}
+
+.field input.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.14);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.84rem;
+  font-weight: 500;
+  margin: 3px 0 0;
+  min-height: 0; /* only takes space when an error is shown */
+}
+
+.error:empty {
+  margin: 0;
+}
+
+/* Checkbox / consent */
+.field--check {
+  margin-bottom: 14px;
+  margin-top: 12px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--purple);
+  cursor: pointer;
+}
+
+.checkbox span {
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.consent-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 5px 0 0 30px;
+}
+
+/* Submit button sized down to match the tighter form */
+.form-card .btn--full {
+  min-height: 44px;
+  padding: 11px 26px;
+  font-size: 1rem;
+}
+
+/* Honeypot: hide from humans, keep reachable for bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-status:empty {
+  margin: 0;
+}
+
+.form-status.is-error {
+  color: var(--error);
+}
+
+/* Thank-you state (brand purple confirmation) */
+.thankyou {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.thankyou__mark {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: rgba(94, 58, 149, 0.12);
+  color: var(--purple);
+  font-size: 1.9rem;
+  line-height: 60px;
+}
+
+.thankyou .section__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Footer (deep brand purple) ---------- */
+.footer {
+  background: var(--purple-deep);
+  color: #d9d0ea;
+  padding: 44px 0;
+}
+
+.footer__inner {
+  text-align: center;
+}
+
+.footer__brand {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.footer__meta {
+  margin: 5px 0 18px;
+  color: #b6a9d0;
+  font-size: 0.98rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.footer__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2d6f7;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.footer__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.footer__links a:hover {
+  color: #fff;
+}
+
+.footer__links a:hover span {
+  text-decoration: underline;
+}
+
+.footer__fine {
+  font-size: 0.88rem;
+  color: #a396c2;
+  margin: 0 auto;
+  max-width: 50ch;
+}
+
+/* ---------- Floating WhatsApp button ---------- */
+.wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  z-index: 1000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wa-float svg {
+  width: 32px;
+  height: 32px;
+}
+
+.wa-float:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.wa-float:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.5);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .wa-float {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .wa-float svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 700px) {
+  .hero {
+    padding: 34px 0 72px;
+  }
+  .brand__logo {
+    height: 44px;
+  }
+  .hero__row {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+  .hero__text {
+    flex: 1 1 auto;
+  }
+  .hero__media {
+    flex: 0 0 400px;
+    max-width: 400px;
+  }
+  .hero__headline {
+    font-size: 2.6rem;
+  }
+  .section__title {
+    font-size: 2.05rem;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Mobile: same single-line scroll, smaller logos so several show at once */
+@media (max-width: 640px) {
+  .ticker__item {
+    padding: 0 14px;
+  }
+  .logo-chip {
+    padding: 8px 12px;
+  }
+  .logo-chip img {
+    height: 32px;
+  }
+}

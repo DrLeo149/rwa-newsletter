@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankya Advisors LLP | Karnataka Apartment Act 2025 Newsletter for RWAs</title>
+  <meta name="description" content="Subscribe to the Ankya Advisors LLP newsletter explaining the new Karnataka Apartment (Ownership and Management) Bill, 2025, for Resident Welfare Associations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= STICKY SITE HEADER ================= -->
+  <!-- The logo stays pinned to the top of the viewport while scrolling. -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- Logo reused from ankyadvisors.com for brand consistency. -->
+      <img class="brand__logo" src="https://ankyadvisors.com/wp-content/uploads/2026/02/Ankya-Advisor-Logo-e1772169641276.png" alt="Ankya Advisors LLP" />
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="container hero__inner">
+      <div class="hero__row">
+        <div class="hero__text">
+          <!-- EDIT: Hero headline. Keep it short and specific to the new Act. -->
+          <h1 class="hero__headline">
+            The Karnataka Apartment Act, 2025, is changing the rules for your association
+          </h1>
+
+          <!-- EDIT: One-line subhead positioning Ankya Advisors as the RWA compliance partner. -->
+          <p class="hero__subhead">
+            Ankya Advisors LLP helps Resident Welfare Associations understand and stay compliant with the new law. Subscribe for a plain-language newsletter built for apartment committees.
+          </p>
+
+          <a href="#subscribe" class="btn btn--primary hero__cta">Get the newsletter</a>
+
+          <!-- EDIT: Optional reassurance line under the CTA. -->
+          <p class="hero__note">Free to subscribe. Unsubscribe anytime.</p>
+        </div>
+
+        <!-- Auto-advancing image carousel: slides left to the next image every 2 seconds. -->
+        <div class="hero__media">
+          <div class="carousel" aria-label="Photos from the Karnataka Apartment Act event">
+            <div class="carousel__track" id="hero-carousel">
+              <!-- EDIT: replace or reorder these by swapping files in the slides/ folder -->
+              <img src="slides/0.jpg" alt="Ankya Advisors speaking at a KSCAA event" />
+              <img src="slides/1.jpeg" alt="Karnataka Apartment Act event" />
+              <img src="slides/2.jpg" alt="Karnataka Apartment Act event" />
+              <img src="slides/3.jpeg" alt="Karnataka Apartment Act event" />
+              <img src="slides/4.jpg" alt="Karnataka Apartment Act event" />
+              <img src="slides/5.jpeg" alt="Karnataka Apartment Act event" />
+              <!-- Clone of the first slide so the loop returns forwards with no jump -->
+              <img src="slides/0.jpg" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= BUILDER LOGO TICKER ================= -->
+  <section class="ticker" aria-label="Builder RWAs we work with">
+    <div class="container">
+      <!-- EDIT: heading -->
+      <h2 class="ticker__heading">Builder RWAs we work with</h2>
+    </div>
+
+    <div class="ticker__viewport">
+      <!--
+        The logo set (Set 1) is repeated four more times inside the track.
+        The animation shifts the track by exactly one set (-20% of five
+        copies) so the loop is seamless with no gap, even on wide screens.
+        Copies 2 to 5 are aria-hidden to avoid repeat announcement by
+        screen readers, and hidden entirely when motion is reduced.
+      -->
+      <div class="ticker__track">
+        <!-- Set 1 (announced) -->
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/brigade.svg" alt="Brigade" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/bollineni.png" alt="Bollineni" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/sipani.png" alt="Sipani" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/puravankara.jpg" alt="Puravankara" /></span></div>
+
+        <!-- Set 2 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/brigade.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/bollineni.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/sipani.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/puravankara.jpg" alt="" /></span></div>
+
+        <!-- Set 3 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/brigade.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/bollineni.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/sipani.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/puravankara.jpg" alt="" /></span></div>
+
+        <!-- Set 4 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/brigade.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/bollineni.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/sipani.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/puravankara.jpg" alt="" /></span></div>
+
+        <!-- Set 5 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/brigade.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/bollineni.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/sipani.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/puravankara.jpg" alt="" /></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VALUE CARDS ================= -->
+  <section class="covers" aria-labelledby="covers-title">
+    <div class="container">
+      <!-- EDIT: Section heading for what the newsletter covers. -->
+      <h2 id="covers-title" class="section__title">What the newsletter covers</h2>
+      <!-- EDIT: Section subtitle. -->
+      <p class="section__lead">
+        A clear breakdown of what the new Act means in practice, one topic at a time.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">1</div>
+          <!-- EDIT: Card 1 title and copy (Ownership). -->
+          <h3 class="card__title">Ownership</h3>
+          <p class="card__text">
+            How the Act redefines apartment ownership, common areas, and the rights that come with each unit. What every owner and committee should know.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">2</div>
+          <!-- EDIT: Card 2 title and copy (Management). -->
+          <h3 class="card__title">Management</h3>
+          <p class="card__text">
+            The new expectations for how associations are formed, run, and governed, including committee duties, meetings, and record keeping.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">3</div>
+          <!-- EDIT: Card 3 title and copy (Compliance). -->
+          <h3 class="card__title">Compliance obligations</h3>
+          <p class="card__text">
+            The filings, timelines, and duties your association now has to meet, plus the practical steps to avoid penalties and stay on the right side of the law.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOFTWARE LOGO TICKER ================= -->
+  <section class="ticker" aria-label="Software we work with">
+    <div class="container">
+      <!-- EDIT: heading -->
+      <h2 class="ticker__heading">Software we work with</h2>
+    </div>
+
+    <div class="ticker__viewport">
+      <!-- Set 1 repeated three more times for a seamless, gapless loop
+           (shift is -25% of four copies). Copies 2 to 4 are aria-hidden. -->
+      <div class="ticker__track ticker__track--sw">
+        <!-- Set 1 (announced) -->
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/nobrokerhood.png" alt="NoBrokerHood" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/mygate.webp" alt="MyGate" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/adda.svg" alt="ADDA" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/apnacomplex.png" alt="ApnaComplex" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/tally.svg" alt="Tally" /></span></div>
+        <div class="ticker__item"><span class="logo-chip"><img src="logos/software/zohobooks.svg" alt="Zoho Books" /></span></div>
+
+        <!-- Set 2 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/nobrokerhood.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/mygate.webp" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/adda.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/apnacomplex.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/tally.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/zohobooks.svg" alt="" /></span></div>
+
+        <!-- Set 3 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/nobrokerhood.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/mygate.webp" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/adda.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/apnacomplex.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/tally.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/zohobooks.svg" alt="" /></span></div>
+
+        <!-- Set 4 -->
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/nobrokerhood.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/mygate.webp" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/adda.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/apnacomplex.png" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/tally.svg" alt="" /></span></div>
+        <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/zohobooks.svg" alt="" /></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES WE OFFER ================= -->
+  <section class="covers" aria-labelledby="services-title">
+    <div class="container">
+      <!-- EDIT: Services section heading. -->
+      <h2 id="services-title" class="section__title">Services we offer</h2>
+      <!-- EDIT: Services section subtitle. -->
+      <p class="section__lead">
+        How Ankya Advisors LLP supports your association under the new Act, from first registration to ongoing accounts.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">1</div>
+          <!-- EDIT: Service 1 title and copy. -->
+          <h3 class="card__title">Smooth registration under the new Act</h3>
+          <p class="card__text">
+            We guide new and forming associations through registration under the new Act, with the documentation, filings, and steps handled correctly the first time.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">2</div>
+          <!-- EDIT: Service 2 title and copy. -->
+          <h3 class="card__title">Compliance with the new Act for existing associations</h3>
+          <p class="card__text">
+            For associations already formed, we map what the new Act changes for you and bring your registration, records, and obligations in line with it.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">3</div>
+          <!-- EDIT: Service 3 title and copy. -->
+          <h3 class="card__title">Accounting, audit, and compliance for RWAs</h3>
+          <p class="card__text">
+            Ongoing bookkeeping, statutory audit, and compliance support built for Resident Welfare Associations, so your accounts stay clean and penalty free.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SUBSCRIPTION FORM ================= -->
+  <section class="subscribe" id="subscribe" aria-labelledby="subscribe-title">
+    <div class="container">
+      <div class="form-card">
+        <!-- EDIT: Form heading and intro copy. -->
+        <h2 id="subscribe-title" class="section__title">Subscribe to the newsletter</h2>
+        <p class="section__lead">
+          Tell us where to send it. We will email the newsletter to your association as each issue is published.
+        </p>
+
+        <!--
+          FORMSPREE
+          This form posts to Formspree, which emails you every submission and
+          stores them in your dashboard (export to CSV anytime).
+          The action below is your live Formspree endpoint.
+        -->
+        <form
+          id="subscribe-form"
+          action="https://formspree.io/f/xpqvrzpl"
+          method="POST"
+          novalidate
+        >
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <p class="error" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="rwa">RWA / association name</label>
+            <input type="text" id="rwa" name="association" autocomplete="organization" required />
+            <p class="error" data-error-for="rwa"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <p class="error" data-error-for="email"></p>
+          </div>
+
+          <!-- Honeypot field. Hidden from real users via CSS. Bots that fill it are rejected. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="field field--check">
+            <label class="checkbox">
+              <input type="checkbox" id="consent" name="consent" value="yes" required />
+              <!-- EDIT: Consent label. Required by the form. -->
+              <span>I agree to receive newsletter updates from Ankya Advisors LLP.</span>
+            </label>
+            <!-- EDIT: Short data-use line under the consent box. -->
+            <p class="consent-note">
+              We use your details only to send this newsletter. We do not sell or share your data. You can unsubscribe at any time.
+            </p>
+            <p class="error" data-error-for="consent"></p>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Subscribe</button>
+          <p class="form-status" id="form-status" role="alert"></p>
+        </form>
+
+        <!-- Thank-you state, hidden until a successful submit. -->
+        <div class="thankyou" id="thankyou" hidden>
+          <div class="thankyou__mark" aria-hidden="true">&#10003;</div>
+          <!-- EDIT: Thank-you heading and message. {association} is filled in by script. -->
+          <h2 class="section__title">You are subscribed</h2>
+          <p class="section__lead" id="thankyou-msg">
+            Thank you. We will send the newsletter for your association to your inbox.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">Ankya Advisors LLP</div>
+      <!-- EDIT: Footer location / tagline. -->
+      <p class="footer__meta">Bangalore, Karnataka</p>
+      <nav class="footer__links" aria-label="Ankya Advisors links">
+        <!-- EDIT: Update these URLs if they ever change. -->
+        <a href="https://ankyadvisors.com/about/" target="_blank" rel="noopener">
+          <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <path d="M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18" />
+          </svg>
+          <span>Website</span>
+        </a>
+        <a href="https://in.linkedin.com/company/ankya-advisors" target="_blank" rel="noopener">
+          <svg class="footer__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/ankya.advisors/" target="_blank" rel="noopener">
+          <svg class="footer__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </nav>
+      <!-- EDIT: Copyright / disclaimer line. -->
+      <p class="footer__fine">
+        This newsletter is for general information only and is not legal advice.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp chat button.
+       EDIT: number is 917338303162 (country code 91 + number, no plus or spaces).
+       EDIT: prefilled message is after text= , URL-encoded (%20 = space, %2C = comma). -->
+  <a
+    class="wa-float"
+    href="https://wa.me/917338303162?text=Hi%20Team%2C%20"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.414z" />
+    </svg>
+  </a>
+
+  <script>
+    (function () {
+      var form = document.getElementById("subscribe-form");
+      var statusEl = document.getElementById("form-status");
+      var thankyou = document.getElementById("thankyou");
+      var thankyouMsg = document.getElementById("thankyou-msg");
+
+      var fields = {
+        name: {
+          el: document.getElementById("name"),
+          validate: function (v) {
+            if (!v.trim()) return "Please enter your full name.";
+            return "";
+          }
+        },
+        rwa: {
+          el: document.getElementById("rwa"),
+          validate: function (v) {
+            if (!v.trim()) return "Please enter your RWA or association name.";
+            return "";
+          }
+        },
+        email: {
+          el: document.getElementById("email"),
+          validate: function (v) {
+            if (!v.trim()) return "Please enter your email address.";
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!re.test(v.trim())) return "Please enter a valid email address.";
+            return "";
+          }
+        },
+        consent: {
+          el: document.getElementById("consent"),
+          validate: function () {
+            if (!document.getElementById("consent").checked) {
+              return "Please tick the box to agree to receive the newsletter.";
+            }
+            return "";
+          }
+        }
+      };
+
+      function showError(key, message) {
+        var msgEl = document.querySelector('[data-error-for="' + key + '"]');
+        if (msgEl) msgEl.textContent = message;
+        if (fields[key].el) {
+          fields[key].el.classList.toggle("is-invalid", !!message);
+        }
+      }
+
+      function validateField(key) {
+        var f = fields[key];
+        var value = f.el.type === "checkbox" ? "" : f.el.value;
+        var message = f.validate(value);
+        showError(key, message);
+        return !message;
+      }
+
+      // Validate a field once the user leaves it, and clear errors as they fix them.
+      Object.keys(fields).forEach(function (key) {
+        var el = fields[key].el;
+        var evt = el.type === "checkbox" ? "change" : "blur";
+        el.addEventListener(evt, function () {
+          validateField(key);
+        });
+        el.addEventListener("input", function () {
+          if (el.classList.contains("is-invalid")) validateField(key);
+        });
+      });
+
+      function validateAll() {
+        var ok = true;
+        Object.keys(fields).forEach(function (key) {
+          if (!validateField(key)) ok = false;
+        });
+        return ok;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        statusEl.textContent = "";
+        statusEl.className = "form-status";
+
+        if (!validateAll()) {
+          statusEl.textContent = "Please fix the highlighted fields and try again.";
+          statusEl.classList.add("is-error");
+          return;
+        }
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        var data = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" }
+        })
+          .then(function (response) {
+            if (response.ok) {
+              var assoc = (document.getElementById("rwa").value || "").trim();
+              if (assoc) {
+                thankyouMsg.textContent =
+                  "Thank you. We will send the newsletter for " +
+                  assoc +
+                  " to your inbox.";
+              }
+              form.hidden = true;
+              thankyou.hidden = false;
+              thankyou.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else {
+              return response.json().then(function (body) {
+                var msg =
+                  body && body.errors && body.errors.length
+                    ? body.errors.map(function (er) { return er.message; }).join(", ")
+                    : "Something went wrong. Please try again.";
+                throw new Error(msg);
+              });
+            }
+          })
+          .catch(function (err) {
+            statusEl.textContent =
+              err.message || "Something went wrong. Please try again in a moment.";
+            statusEl.classList.add("is-error");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Subscribe";
+          });
+      });
+    })();
+  </script>
+
+  <script>
+    // Hero image carousel: auto-advance one slide to the left every 2 seconds.
+    (function () {
+      var track = document.getElementById("hero-carousel");
+      if (!track) return;
+      var reduce =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) return; // keep the first image static for reduced motion
+
+      var realCount = track.children.length - 1; // last child is the clone
+      var i = 0;
+
+      setInterval(function () {
+        i++;
+        track.style.transition = "transform 0.6s ease";
+        track.style.transform = "translateX(" + -i * 100 + "%)";
+        if (i === realCount) {
+          // now showing the cloned first slide; snap back with no transition
+          window.setTimeout(function () {
+            track.style.transition = "none";
+            i = 0;
+            track.style.transform = "translateX(0)";
+          }, 650);
+        }
+      }, 2000);
+    })();
+  </script>
+</body>
+</html>
