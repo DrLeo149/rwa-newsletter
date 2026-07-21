@@ -229,6 +229,50 @@ h3 {
   }
 }
 
+/* Book-a-call button under the carousel */
+.hero__book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px 20px;
+  min-height: 48px;
+  border: 1.5px solid var(--purple);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--purple);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.hero__book:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+.hero__book:focus-visible {
+  outline: 3px solid rgba(94, 58, 149, 0.4);
+  outline-offset: 2px;
+}
+
+.hero__book-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hero__book-note {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 /* ---------- Builder logo ticker ---------- */
 .ticker {
   background: var(--purple-deep);
