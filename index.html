@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -16,8 +16,14 @@
   <!-- The logo stays pinned to the top of the viewport while scrolling. -->
   <header class="site-header">
     <div class="container site-header__inner">
-      <!-- RWA360 lockup, stored in this repo so the header has no external dependency. -->
-      <img class="brand__logo" src="logos/rwa360-logo-horizontal.png" alt="RWA360, financial services for housing societies" />
+      <a class="brand" href="index.html" aria-label="RWA360 home">
+        <!-- RWA360 lockup, stored in this repo so the header has no external dependency. -->
+        <img class="brand__logo" src="logos/rwa360-logo-horizontal.png" alt="RWA360, financial services for housing societies" />
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="services.html">Services</a>
+      </nav>
     </div>
   </header>
 
@@ -212,47 +218,6 @@
         <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/apnacomplex.png" alt="" /></span></div>
         <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/tally.svg" alt="" /></span></div>
         <div class="ticker__item" data-dup aria-hidden="true"><span class="logo-chip"><img src="logos/software/zohobooks.svg" alt="" /></span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SERVICES WE OFFER ================= -->
-  <section class="covers" aria-labelledby="services-title">
-    <div class="container">
-      <!-- EDIT: Services section heading. -->
-      <h2 id="services-title" class="section__title">Services we offer</h2>
-      <!-- EDIT: Services section subtitle. -->
-      <p class="section__lead">
-        How RWA360 supports your association under the new Act, from first registration to ongoing accounts.
-      </p>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card__icon" aria-hidden="true">1</div>
-          <!-- EDIT: Service 1 title and copy. -->
-          <h3 class="card__title">Smooth registration under the new Act</h3>
-          <p class="card__text">
-            We guide new and forming associations through registration under the new Act, with the documentation, filings, and steps handled correctly the first time.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card__icon" aria-hidden="true">2</div>
-          <!-- EDIT: Service 2 title and copy. -->
-          <h3 class="card__title">Compliance with the new Act for existing associations</h3>
-          <p class="card__text">
-            For associations already formed, we map what the new Act changes for you and bring your registration, records, and obligations in line with it.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card__icon" aria-hidden="true">3</div>
-          <!-- EDIT: Service 3 title and copy. -->
-          <h3 class="card__title">Accounting, audit, and compliance for RWAs</h3>
-          <p class="card__text">
-            Ongoing bookkeeping, statutory audit, and compliance support built for Resident Welfare Associations, so your accounts stay clean and penalty free.
-          </p>
-        </article>
       </div>
     </div>
   </section>

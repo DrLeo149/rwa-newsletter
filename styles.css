@@ -123,6 +123,27 @@ h3 {
   cursor: not-allowed;
 }
 
+.btn--outline {
+  background: #fff;
+  color: var(--purple);
+  border-color: var(--purple);
+}
+
+.btn--outline:hover {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+/* Services page CTA row */
+.services-cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
 /* ---------- Hero (white, corporate, logo-led) ---------- */
 .hero {
   background: var(--surface);
@@ -144,15 +165,60 @@ h3 {
 .site-header__inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .brand__logo {
   display: block;
   width: auto;
   height: 46px;   /* sized for the horizontal RWA360 lockup */
-  max-width: 70%;
+  max-width: 100%;
+}
+
+/* Header navigation tabs */
+.site-nav {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.site-nav a {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--purple);
+  background: var(--purple-soft);
+}
+
+.site-nav a.is-active {
+  color: var(--purple);
+}
+
+@media (max-width: 480px) {
+  .brand__logo {
+    height: 38px;
+  }
+  .site-nav a {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
 }
 
 .hero__headline {
